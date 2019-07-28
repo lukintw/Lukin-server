@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  gender: 1
+  birth: 2019-07-25 01:09:55
+  height: 1
+  education: 1
+  personality: 1
+  image: MyString
+
+two:
+  name: MyString
+  gender: 1
+  birth: 2019-07-25 01:09:55
+  height: 1
+  education: 1
+  personality: 1
+  image: MyString

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  is_used: false
+  lv: 1
+  equipment: MyString
+  experience: 1.5
+  go_time: 
+  back_time: 2019-07-25 01:10:06
+
+two:
+  player_id: 1
+  is_used: false
+  lv: 1
+  equipment: MyString
+  experience: 1.5
+  go_time: 
+  back_time: 2019-07-25 01:10:06

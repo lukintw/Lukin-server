@@ -1,0 +1,2 @@
+class Buff < ApplicationRecord
+end

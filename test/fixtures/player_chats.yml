@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  friend_id: 1
+  match_value: 1
+  chat_box_id: 1
+
+two:
+  player_id: 1
+  friend_id: 1
+  match_value: 1
+  chat_box_id: 1

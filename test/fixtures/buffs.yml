@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  add_hello_count: 1
+  add_friend_count: 1
+
+two:
+  player_id: 1
+  add_hello_count: 1
+  add_friend_count: 1

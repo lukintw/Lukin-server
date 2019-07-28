@@ -1,0 +1,2 @@
+class PlayerAnswer < ApplicationRecord
+end

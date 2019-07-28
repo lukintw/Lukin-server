@@ -1,0 +1,2 @@
+class GameDataExperience < ApplicationRecord
+end

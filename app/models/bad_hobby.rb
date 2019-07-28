@@ -1,0 +1,2 @@
+class BadHobby < ApplicationRecord
+end

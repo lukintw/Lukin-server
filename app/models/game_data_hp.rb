@@ -1,0 +1,2 @@
+class GameDataHp < ApplicationRecord
+end

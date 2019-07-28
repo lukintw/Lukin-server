@@ -1,0 +1,2 @@
+class PlayerChat < ApplicationRecord
+end
