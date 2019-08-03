@@ -6,6 +6,7 @@ require "capistrano/deploy"
 require 'capistrano/rails'
 require 'capistrano/passenger'
 require 'capistrano/rbenv'
+require 'capistrano/dotenv'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.5'
@@ -20,6 +21,10 @@ set :rbenv_ruby, '2.5.5'
 # or
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
+
+invoke 'dotenv:read'
+invoke 'dotenv:check'
+invoke 'dotenv:setup'
 
 # Include tasks from other gems included in your Gemfile
 #
