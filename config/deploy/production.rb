@@ -9,6 +9,11 @@
 
 server '18.222.92.89', user: 'deploy', roles: %w{app db web}
 
+set :ssh_options, {
+    keys: %w(/Users/johnliu/.ssh/id_rsa.pub),
+    forward_agent: false,
+    auth_methods: %w(publickey password)
+  }
 # role-based syntax
 # ==================
 
