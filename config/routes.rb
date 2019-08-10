@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     resources :home
     resources :players
   end
+  get 'privacy' => 'public#privacy'
+  get 'service' => 'public#service'
 
 end
