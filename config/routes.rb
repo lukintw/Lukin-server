@@ -4,6 +4,13 @@ Rails.application.routes.draw do
   namespace :api do
     resources :home
     resources :players
+    resources :friends
+    resources :datum do
+      collection do 
+        post :update_data
+      end
+    end
+    resources :pets
   end
   get 'privacy' => 'public#privacy'
   get 'service' => 'public#service'

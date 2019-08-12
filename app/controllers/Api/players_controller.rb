@@ -1,4 +1,4 @@
-class Api::PlayersController < ApplicationController\
+class Api::PlayersController < ApplicationController
 
 
 end
