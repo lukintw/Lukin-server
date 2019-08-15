@@ -10,6 +10,11 @@ Rails.application.routes.draw do
         post :update_data
       end
     end
+    resources :chats do
+      collection do
+        post :say_hello
+      end
+    end
     resources :pets
   end
   get 'privacy' => 'public#privacy'
