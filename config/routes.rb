@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root :to => 'api/home#index'
   namespace :api do
     resources :home
-    resources :players
+    resources :players do 
+      collection do
+        get :strangers
+      end
+    end
     resources :friends
     resources :datum do
       collection do 
