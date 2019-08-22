@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_15_162403) do
+ActiveRecord::Schema.define(version: 2019_08_21_171446) do
 
   create_table "bad_hobbies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "player_id"
@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_162403) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "log_in_at"
   end
 
 end

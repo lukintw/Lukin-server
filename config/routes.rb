@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root :to => 'api/home#index'
   namespace :api do
-    resources :home
-    resources :players do 
+    resources :home do
+      collection do
+        post :auth
+      end  
+    end
+    resources :players do
       collection do
         get :strangers
       end
