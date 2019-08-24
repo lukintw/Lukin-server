@@ -13,6 +13,12 @@ Rails.application.routes.draw do
         post :filter_friends
       end
     end
+    resources :player_grades do
+      collection do
+        post :answer
+        get :grade
+      end
+    end
     resources :friends
     resources :datum do
       collection do 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_171446) do
+ActiveRecord::Schema.define(version: 2019_08_24_165546) do
 
   create_table "bad_hobbies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "player_id"
@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_171446) do
 
   create_table "player_grades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "player_id"
-    t.integer "aspect"
+    t.string "aspect"
     t.integer "grade"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_171446) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "log_in_at"
+    t.string "answer_result"
   end
 
 end
