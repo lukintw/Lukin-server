@@ -5,11 +5,12 @@ Rails.application.routes.draw do
     resources :home do
       collection do
         post :auth
-      end  
+      end
     end
     resources :players do
       collection do
         get :strangers
+        post :filter_friends
       end
     end
     resources :friends
