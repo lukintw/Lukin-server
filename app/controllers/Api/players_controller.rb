@@ -1,7 +1,6 @@
 class Api::PlayersController < ApplicationController
-  before_action :check_auth
   protect_from_forgery except: :index
-
+  before_action :check_auth
   def strangers
     player_id = params[:player_id]
     player_data = Datum.find_by(player_id: player_id)
@@ -40,15 +39,15 @@ class Api::PlayersController < ApplicationController
     player_id = params[:player_id]
     stranger_data = Player.includes(:datum).where.not(id: player_id)
     if params[:gender]
-      stranger_data = stranger_data.where(gender: gender)
+      stranger_data = stranger_data.where(gender: params[:gender])
     elsif params[:age]
-      start_age = params[:age].split(',')[0]
-      end_age = params[:age].split(',')[1]
-      stranger_data = stranger_data.where(birth: start_age.years.ago..end_age.years.age)
+      start_age = params[:age].split(',')[0].to_i
+      end_age = params[:age].split(',')[1].to_i
+      stranger_data = stranger_data.where(birth: end_age.years.ago..start_age.years.ago)
     elsif params[:height]
-      min_height = params[:height].split(',')[0]
-      max_height = params[:height].split(',')[1]
-      stranger_data = stranger_data.where(height: min_height..max_height)
+      min_height = params[:height].split(',')[0].to_i
+      max_height = params[:height].split(',')[1].to_i
+      stranger_data = stranger_data.where(height: max_height..min_height)
     elsif params[:education]
       stranger_data = stranger_data.where(education: params[:education])
     elsif params[:personality]
