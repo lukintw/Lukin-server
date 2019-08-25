@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_24_165546) do
+ActiveRecord::Schema.define(version: 2019_08_25_063655) do
 
   create_table "bad_hobbies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "player_id"
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2019_08_24_165546) do
   create_table "chat_boxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "player_chat_id"
   end
 
   create_table "chat_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -118,9 +117,9 @@ ActiveRecord::Schema.define(version: 2019_08_24_165546) do
     t.integer "player_id"
     t.integer "friend_id"
     t.integer "match_value"
-    t.integer "chat_box_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "chat_box_id"
   end
 
   create_table "player_grades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

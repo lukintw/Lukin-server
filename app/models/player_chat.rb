@@ -1,3 +1,3 @@
 class PlayerChat < ApplicationRecord
-    has_one :chat_box
+    belongs_to :chat_box
 end
