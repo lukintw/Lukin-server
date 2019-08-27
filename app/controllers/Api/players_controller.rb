@@ -1,6 +1,17 @@
 class Api::PlayersController < ApplicationController
   protect_from_forgery except: :index
   before_action :check_auth
+
+  def show
+    player_id = params['id']
+    player = Player.find_by(id: player_id)
+
+    @response['data'] = player
+    @response['player_data'] = player.try(:datum)
+    @response['player_pets'] = player.try(:pets)
+    render json: @response
+  end
+
   def strangers
     player_id = params[:player_id]
     player_data = Datum.find_by(player_id: player_id)
