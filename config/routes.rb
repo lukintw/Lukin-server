@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root :to => 'api/home#index'
+  root to: 'api/home#index'
+  mount ActionCable.server => '/cable'
   namespace :api do
     resources :home do
       collection do
@@ -28,6 +29,8 @@ Rails.application.routes.draw do
     resources :chats do
       collection do
         post :say_hello
+        get :chat_info
+        post :update_match_value
       end
     end
     resources :pets
